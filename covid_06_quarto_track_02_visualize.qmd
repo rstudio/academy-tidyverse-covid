@@ -1,0 +1,29 @@
+---
+title: "Track II: Data visualization"
+format: html
+---
+
+# Instructions
+
+For this final milestone, apply what you have learned about data visualization and exploratory data analysis to further explore the COVID-19 data set. 
+
+Use at least three related graphs to investigate a variable (or variables) of interest in this data. Your approach should be iterative (graph 2 builds on graph 1) and move you toward better understanding a question of your choosing.
+
+Alternatively, return to a previous milestone and produce a publication-quality table or graph using the skills you have learned this week. Some ideas:
+
+1. Choose a data visualization from earlier in this course and further customize your graph using using themes, annotations, labels and/or aesthetics with ggplot2
+
+2. Create a table, or choose a table you created earlier in this course, and use gt to build the table into an effective standalone figure, including colored cells and a footnote
+
+To learn more about the variables contained in the data set, refer to the data dictionary: https://rsacdn.link/milestones/internal/v2/covid/assets/covid_dictionary.html
+
+# Milestone
+```{r}
+#| label: setup
+#| include: false
+
+# loading packages
+library(tidyverse)
+```
+
+## Data visualization

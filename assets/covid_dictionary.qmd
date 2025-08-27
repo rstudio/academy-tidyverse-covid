@@ -1,0 +1,41 @@
+---
+title: COVID-19 Tracking Project Data Dictionary 
+output: 
+  html_document: 
+    theme: cerulean
+    css: https://rsacdn.link/teachthis/css/style.css
+---
+
+## The COVID-19 Data
+
+This project uses data from the [The COVID Tracking Project](https://covidtracking.com/):
+
+> We collect, cross-check, and publish COVID-19 data from 56 US states and territories in three main areas: testing, hospitalization, and patient outcomes, racial and ethnic demographic information via [The COVID Racial Data Tracker](https://covidtracking.com/race), and long-term-care facilities via the [Long-Term-Care tracker](https://covidtracking.com/data/longtermcare). We compile these numbers to provide the most complete picture we can assemble of the US COVID-19 testing effort and the outbreak’s effects on the people and communities it strikes.
+
+### Disclaimers
+
+The data you will work with for this project contains a subset of variables from the original COVID Tracking project data, for all 50 US states. You can download the full original data from the COVID Tracking project [here](https://covidtracking.com/data/download). See [here](https://covidtracking.com/about-data/data-definitions) for data definitions for this original data.
+
+This data is complex because data collection and reporting standards for COVID-19 varied both across states and within states over time. We encourage you to approach comparisons with thoughtful curiosity. Complexity in data definitions is a very real problem in data science; being comfortable with this complexity is a key skill.
+
+Additionally, there may be anomalies in the data as a result of data entry errors or other real-world events that interfered with data collection. As a result, we recommend that you interpret the data with caution and refer to information about the original [data sources](https://covidtracking.com/about-data/source) for more information if needed:
+
+> Individual state/territory data pages such as [Wyoming’s](https://covidtracking.com/data/state/wyoming), all of which are accessible from [our main data page](https://covidtracking.com/data), include a link at the top of the page to the ["Data sources and screenshots"](https://screenshots.covidtracking.com/wyoming/) for that state as well as a link to the ["Notes, data anomalies, and official cautions"](https://covidtracking.com/data/state/wyoming/notes) page for that state...
+We discuss anomalies, ambiguities, warnings, and methodological changes for each state’s data on each state’s notes page. If you notice anything odd about a state’s data, this is the first place to look for an explanation.
+
+**A note on negative values**: negative values in the tests and cases variables represent data corrections made by states. In situations where cases were over-reported, a negative value appears on days when overall case counts were corrected.
+
+### Variables: `covid.csv`
+
+`date`: Date on which data was collected by The COVID Tracking Project.
+
+`state`: Two-letter abbreviation for the state or territory. 
+
+`tests`: The daily increase in COVID-19 tests (i.e. the number of new cases for a given day). Test are reported differently across states -- some states/territories report tests in units of test encounters, some report tests in units of specimens, and some report tests in units of unique people. Moreover, some jurisdictions include antigen tests in their total test counts without reporting a separate total of viral (PCR) tests. Therefore, this value is an aggregate calculation of heterogeneous figures.
+
+`cases`: The daily increase in positive and probable COVID-19 cases (i.e. the number of new cases for a given day). If a state is not reporting probable cases, this field will just represent confirmed cases. 
+
+`hospitalizations`: The daily increase in COVID-19 hospitalizations (i.e. the number of new hospitalizations for a given day). Like tests, these figures are reported slightly differently depending on the state.
+
+`deaths`: The daily increase in deaths with confirmed or probable COVID-19 case diagnosis (i.e. the number of new deaths for a given day). There is also some heterogeneity in reporting by state, e.g. requiring that COVID-19 is listed on the death certificate.
+

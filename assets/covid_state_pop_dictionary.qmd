@@ -1,0 +1,18 @@
+---
+title: COVID-19 Tracking Project Data Dictionary 
+output: 
+  html_document: 
+    theme: cerulean
+    css: https://rsacdn.link/teachthis/css/style.css
+---
+
+## The COVID-19 Data
+
+This project uses data from the [The COVID Tracking Project](https://covidtracking.com/):
+
+### Variables: `covid_state_pop.csv`
+
+`state`: Two-letter abbreviation for the state or territory. 
+
+`population`: Population of the state.
+

@@ -1,0 +1,141 @@
+---
+title: "Work with data types"
+format: html
+---
+
+# Instructions
+
+This week, you worked with three new data types in R -- factors, strings, and date-times -- using the forcats, stringr, and lubridate packages, respectively.
+
+In this milestone, you'll work with the date data contained in `covid` to determine whether there is a seasonal effect for COVID-19 deaths.
+
+To learn more about the variables contained in the data set, refer to the data dictionary: https://rsacdn.link/milestones/internal/v2/covid/assets/covid_dictionary.html
+
+# Milestone
+
+```{r}
+#| label: setup
+#| include: false
+```
+
+## Data types
+
+In this milestone, you'll extract the month of each date and then create a variable that records whether each COVID-19 case occurred during the spring, summer, fall, or winter.
+
+## Recreation
+
+### Part 1 - Import
+
+To begin, read the data from `covid.csv` which lives in your `data/` directory to an object named `covid`:
+
+```{r}
+#| label: recreation-import
+
+```
+
+### Part 2 - Seasons
+
+Run the code below to see a table.
+
+```{r}
+#| label: recreate-this-1
+#| message: false
+solution <- readr::read_csv("data/milestone05.csv")
+solution
+```
+
+Your task is to use what you've learned about the lubridate package to transform `covid` into this table. You will need to:
+
+1. Save the month of each `date`, as a number, in a new variable named `covid_month`
+2. Recode the values of `covid_month` to make a new variable named `season`. Recode the values such that:
+
+    +  Months 1, 2, 3 = "Winter"
+    +  Months 4, 5, 6 = "Spring"
+    +  Months 7, 8, 9 = "Summer"
+    +  Months 10, 11, 12 = "Fall"
+    
+(Hint: use function `case_when()` for recoding values of `covid_month` into `season`.)
+    
+3. Add your new variables immediately after the `date` column
+
+Work in the code chunk below. Save the result as `covid_seasons`; we will use it in Part 3.
+
+```{r}
+#| label: recreation-seasons
+
+```
+
+Run the following code chunk to test whether you have the same answer as the solution:
+
+```{r}
+#| label: compare
+#| eval: false
+waldo::compare(covid_seasons, solution, tolerance = 1e-4)
+```
+
+## Part 3 - The role of factor orders in visualizations
+
+Now that you have a `season` variable, you can compute and visualize summaries for each season in the same manner as in previous milestones. Run the chunk below to view a summary table.
+
+```{r}
+#| label: summary
+seasons_summary <-
+  covid_seasons %>% 
+  group_by(season) %>% 
+  summarize(
+    total_deaths = sum(deaths, na.rm = TRUE)
+  ) 
+
+seasons_summary
+```
+
+After you have run the chunk above to create `seasons_summary`, run the chunk below to visualize the data of `seasons_summary`.
+
+```{r}
+#| label: summary-plot
+#| eval: false
+seasons_summary %>% 
+  ggplot(mapping = aes(x = season, y = total_deaths)) +
+  geom_col() + 
+  labs(title = "COVID-19 deaths by season")
+```
+
+This is a nice plot, but the order of seasons on the x axis is arbitrary (alphabetical). Let's give the seasons a more principled order before we publish this plot.
+
+#### Visualization
+
+Using the File Explorer on the left, navigate to the `images/` directory, then click on `milestone05.png` to open an image in the Editor pane.
+
+You should see a plot in which the seasons are now ordered chronologically from winter to fall. Your task is to recreate this plot.
+
+Use the chunk below to recreate this plot. Hint: turn the `season` variable into a factor with a set order.
+
+```{r}
+#| label: recreation-visualize-1
+
+```
+
+## Extension
+
+Using the code chunk below, investigate a research question about this data, using the skills you have learned this week and in previous weeks of Academy. Some ideas:
+
+1. Use data visualization to investigate if there is a seasonal pattern in COVID-19 hospitalizations - for the entire country, for certain states, and/or regions.
+2. Is there a month-by-month pattern for COVID-19 deaths (or hospitalizations)? Does this vary if you focus on certain states or regions?
+3. Looking within a month, do you see any patterns in deaths, case numbers, or hospitalizations based on calendar day? Day of the week?
+4. [any other research question of interest]
+
+
+Alternately, working with a data set of your own, complete the following:
+
+1. Read in your data
+2. If your data contains ...
+  ... date-time data, use a lubridate function to correctly format your date-time variables
+  ... string data, use a stringr function to manipulate your string variables
+  ... categorical data, use a forcats function to modify the factor levels of your categorical variables (reorder, recode, etc.)
+3. Using a table or graph, present a meaningful subset of your modified data
+
+```{r}
+#| label: extension
+
+```
+

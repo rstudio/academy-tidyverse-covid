@@ -1,0 +1,90 @@
+---
+title: "Summarize data"
+format: html
+---
+
+# Instructions
+
+This week, you learned several new functions from dplyr (pronounced DEE-ply-er), a commonly-used package from the tidyverse for wrangling data. You also learned some new ways to enhance your plots.
+
+You'll use these skills to explore determine the top ten states with the highest number of COVID-related deaths.
+
+To learn more about the variables contained in the data set, refer to the data dictionary: https://rsacdn.link/milestones/internal/v2/covid/assets/covid_dictionary.html
+
+# Milestone
+
+```{r}
+#| label: setup
+#| include: false
+
+# Load your packages here
+
+```
+
+## Summarize data
+
+In this milestone you'll group the data by state and then summarize the results to determine the top ten states with the highest COVID-related deaths.
+
+## Recreation
+
+### Part 1 - Import
+
+Before you begin, you will need to import your data set. Use the code chunk below to read the data from the data file `covid.csv`, which is stored in the `data/` folder in your working directory. Be sure to save the data to an object named `covid`.
+
+```{r}
+#| label: recreation-import
+
+```
+
+### Part 2 - Summarize data
+
+Run the code below to see a table.
+
+```{r}
+#| label: recreate-this
+#| message: false
+solution <- readr::read_csv("data/milestone02.csv")
+solution
+```
+
+Your task is to use what you've learned about the dplyr package to transform `covid` into this table. You will need to:
+
+1. Group the data
+2. Summarize `total_cases` and `total_deaths` for each group
+3. Use `slice_max()` to find the top ten states with the highest `total_deaths`
+
+Work in the code chunk below. Save the result as `cases_deaths`.
+
+```{r}
+#| label: recreation-summary
+
+```
+
+Run the following code chunk to test whether you have the same answer as the solution:
+
+```{r}
+#| label: compare
+#| eval: false
+waldo::compare(cases_deaths, solution, tolerance = 1e-4)
+```
+
+## Extension
+
+Using the code chunk below, investigate a single research question about this data, using the data wrangling skills you learned this week. Some ideas:
+
+1. Data visualization is often an easier way to see patterns than numbers in a table. Build a graph from your summary table of the 10 states with the highest values of `total_deaths`. Do you see any relationship between `total_cases` and `total_deaths` in these states?
+2. Create both a table and a related graph for the 10 states with the _fewest_ deaths. Do you see any relationship between `total_cases` and `total_deaths` in these states?
+3. We have not yet explored the number of COVID-19 _tests_; what can you learn about the number of tests administered in different states? The relationship between `tests` and `cases`?
+4. [any other research question of interest]
+
+Alternately, working with a data set of your own, complete the following:
+
+1. Read in your data
+2. Use `group_by()` and `summarize()` to produce simple a table from some subset of your data 
+3. Create a related graph of this data subset using ggplot 
+
+
+```{r}
+#| label: extension
+
+```

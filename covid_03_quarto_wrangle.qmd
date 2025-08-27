@@ -1,0 +1,94 @@
+---
+title: "Wrangle rows and columns"
+format: html
+---
+
+# Instructions
+
+This week, you learned several more functions from the dplyr package (pronounced DEE-ply-er). These functions help you work with the rows and columns in your data set.
+
+You'll use these skills to add new columns that calculate the cumulative number of `cases` and `deaths` across states.
+
+To learn more about the variables contained in the data set, refer to the data dictionary: https://rsacdn.link/milestones/internal/v2/covid/assets/covid_dictionary.html
+
+# Milestone
+
+```{r}
+#| label: setup
+#| include: false
+
+# Load your packages here
+
+```
+
+## Create and select columns
+
+In this milestone, you'll create a new variable that calculates the cumulative value of `cases` and `deaths` across states. 
+
+## Recreation
+
+### Part 1 - Import
+
+Before you begin, you will need to import your data set. Use the code chunk below to read the data from the data file `covid.csv`, which is stored in the `data/` folder in your working directory. Be sure to save the data to an object named `covid`.
+
+```{r}
+#| label: recreation-import
+
+```
+
+### Part 2 - Create
+
+We would like to find the cumulative value of both `cases` and `deaths` over time for each state. Run the code below to see a table.
+
+```{r}
+#| label: recreate-this
+#| message: false
+solution <- readr::read_csv("data/milestone03.csv")
+solution
+```
+
+Your task is to use what you've learned about the dplyr package to transform `covid` into this table. You will need to:
+
+1. Create two new columns named `cumul_cases` and `cumul_deaths`, which contain the result of `cumsum()`. _Hint_: What function, placed before `mutate()`, will calculate the cumulative sums separately for each state?
+
+2. Select four columns: `state`, `date`, `cumul_cases`, `cumul_deaths`.
+
+3. Arrange the rows by `state` and `date`
+
+4. Save your resulting table as `covid_cumul`
+
+Work in the code chunk below:
+
+
+```{r}
+#| label: recreation-create
+
+```
+
+Run the following code chunk to test whether you have the same answer as the solution:
+
+```{r}
+#| label: compare
+#| eval: false
+waldo::compare(covid_cumul, solution, tolerance = 1e-4, ignore_attr = c("class", "groups"))
+```
+
+## Extension
+
+Using the code chunk below, investigate a single research question about this data, using the additional data wrangling skills you learned this week. Some ideas:
+
+1. Some states within the US coordinated their policies in response to the pandemic; do you see a regional or coalition-based pattern in `counts`, `deaths`, or other variables? Illustrate your findings with at least one graph.
+2. This milestone focused on patterns in `cases` over time, within New York. What patterns do you see in the _ratio_ of `deaths` to `cases`, over time, within New York and/or elsewhere? (Compare with states of your choosing.)
+3. Based on _either_ `cases` or `deaths`, divide this data into groups of your choosing (e.g. low/medium/high, above/below a national average, etc.) and explore patterns based on these groups.
+4. [any other research question of interest]
+
+Alternately, working with a data set of your own, complete the following:
+
+1. Read in your data
+2. Create at least one new variable in your data set (using `mutate()` and/or `summarize()`), or use other dplyr functions to alter your data
+3. Use your updated data set to create at least one graph and/or table
+
+```{r}
+#| label: extension
+
+```
