@@ -16,17 +16,22 @@ This folder contains materials for your Posit Academy course project. You will c
 
 ## Getting Started
 
-**Step 1**: Install R packages you will need for this project:
+**Step 1: Install R packages you will need for this project using renv**
 
 1. Open your Console tab at the bottom of the Positron IDE.
-2. Run `renv::restore()` in your Console (this may take several minutes to complete).
-3. Re-start your R session by clicking the Restart Console button (circular arrow icon) near the top-right corner of the Console.
 
-Note: `renv::restore()` uses renv, a popular tool for managing reproducible R environments, to install all of the R packages included in the `renv.lock` file You will see output in the Console indicating that R packages are being installed. Wait for this to complete before proceeding.
+2. Run `install.packages("renv")` in your Console to install the renv package.
 
-**Step 2**: Open your first milestone file.
+3. Run `renv::restore()` in your Console.  You will see output in the Console indicating that R packages are being installed. **Wait for this to complete before proceeding** (it may take several minutes).
+
+4. Re-start your R session by clicking the Restart Console button (circular arrow icon) near the top-right corner of the Console.
+
+Note: renv is a popular tool for managing reproducible R environments -- you can learn more about it here: https://rstudio.github.io/renv/
+
+**Step 2: Open your first milestone file.**
 
 1. In the Explorer tab on the left, open the file `covid_01_quarto_visualize.qmd`
+
 2. Follow the instructions in this file to complete the exercises
 
 ## Note: One milestone at a time
@@ -38,5 +43,3 @@ Milestone files are numbered sequentially according to the week of the course. F
 Week 1 = `covid_01_quarto_visualize.qmd`
 Week 2 = `covid_02_quarto_summarize.qmd`
 etc.
-
-(Depending on your project, the milestone files may have different names, but they will still be numbered sequentially.)
