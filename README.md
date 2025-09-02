@@ -1,17 +1,14 @@
 # Welcome
 
-Welcome to your Posit Academy project! This folder contains materials for analyzing COVID-19 data from the COVID Tracking Project using R.
+This folder contains materials for your Posit Academy course project. You will complete this project in Positron using a dedicated instance of Posit Workbench (instructions for accessing Posit Workbench will be shared at the beginning of your course).
+
+**By accessing these Posit Academy course materials, you agree to Posit's [End User License Agreement](https://posit.co/about/eula/) and [Learning Services Agreement](https://posit.co/learning-services-agreement/).**
 
 ## Project Structure
 
-- **Quarto Documents (.qmd files)**: These are the milestone files where you'll complete your work:
-  - Files are numbered 01-05 in sequence, building skills progressively
-  - Each milestone introduces new Python data science techniques
-  - You will complete milestone recreations and extensions within these files to advance through the project
+- **Quarto (.qmd) files**: These are the project milestone files where you'll complete your work each week
 
-- **data/**: Contains the COVID-19 datasets you'll analyze
-  - Main files: `covid.csv`, `covid_state_pop.csv`
-  - Milestone "solution" datasets for you to compare against your work
+- **data/**: Contains the datasets you'll explore along with "solution" datasets for you to compare against your work
 
 - **assets/**: Contains data dictionaries explaining the variables in each dataset
 
@@ -21,7 +18,7 @@ Welcome to your Posit Academy project! This folder contains materials for analyz
 
 **Step 1**: Install R packages you will need for this project:
 
-1. Open your Console tab at the bottom of the IDE.
+1. Open your Console tab at the bottom of the Positron IDE.
 2. Run `renv::restore()` in your Console (this may take several minutes to complete).
 3. Re-start your R session by clicking the Restart Console button (circular arrow icon) near the top-right corner of the Console.
 
@@ -31,3 +28,15 @@ Note: `renv::restore()` uses renv, a popular tool for managing reproducible R en
 
 1. In the Explorer tab on the left, open the file `covid_01_quarto_visualize.qmd`
 2. Follow the instructions in this file to complete the exercises
+
+## Note: One milestone at a time
+
+Once you have set up your project in Positron, you will have access to all of the milestone files for your project. However, we encourage you to **only focus on the milestone corresponding to the current week of your Academy course**.
+
+Milestone files are numbered sequentially according to the week of the course. For example:
+
+Week 1 = `covid_01_quarto_visualize.qmd`
+Week 2 = `covid_02_quarto_summarize.qmd`
+etc.
+
+(Depending on your project, the milestone files may have different names, but they will still be numbered sequentially.)
