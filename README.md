@@ -40,6 +40,6 @@ Once you have set up your project in Positron, you will have access to all of th
 
 Milestone files are numbered sequentially according to the week of the course. For example:
 
-Week 1 = `covid_01_quarto_visualize.qmd`
-Week 2 = `covid_02_quarto_summarize.qmd`
+Week 1 = `covid_01_quarto_visualize.qmd`  
+Week 2 = `covid_02_quarto_summarize.qmd`  
 etc.
