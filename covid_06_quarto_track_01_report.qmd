@@ -7,9 +7,9 @@ format: html
 
 For this final milestone, showcase your project by creating a Quarto report in one of the following formats:
 
-* [HTML report](https://quarto.org/docs/output-formats/html-basics.html){target="_blank" rel="noopener noreferrer"} (possibly with [parameters](https://quarto.org/docs/computations/parameters.html){target="_blank" rel="noopener noreferrer"})
-* [Slideshow](https://quarto.org/docs/presentations/revealjs/){target="_blank" rel="noopener noreferrer"}
-* [Dashboard](https://quarto.org/docs/dashboards/){target="_blank" rel="noopener noreferrer"}
+* HTML report: https://quarto.org/docs/output-formats/html-basics.html (possibly with parameters: https://quarto.org/docs/computations/parameters.html)
+* Slideshow: https://quarto.org/docs/presentations/revealjs/
+* Dashboard: https://quarto.org/docs/dashboards/
 
 Your report should bring together code from previous milestones (add new code if you wish) to tell a coherent story of either:
 
