@@ -16,17 +16,15 @@ This folder contains materials for your Posit Academy course project. You will c
 
 ## Getting Started
 
-**Step 1: Install R packages you will need for this project using renv**
+**Step 1: Install R packages**
 
 1. Open your Console tab at the bottom of the IDE.
 
-2. Run `install.packages("renv")` in your Console to install the renv package.
+2. Run the following in your Console to install R packages you will need for this project: 
 
-3. Run `renv::restore()` in your Console.  You will see output in the Console indicating that R packages are being installed. **Wait for this to complete before proceeding** (it may take several minutes).
+`install.packages(c("broom", "gt", "knitr", "rmarkdown", "tidyverse", "waldo"))`
 
-4. Re-start your R session by clicking the Restart Console button (circular arrow icon) near the top-right corner of the Console.
-
-Note: renv is a popular tool for managing reproducible R environments -- you can learn more about it here: https://rstudio.github.io/renv/
+Note: This may take several minutes to complete.
 
 **Step 2: Open your first milestone.**
 
