@@ -75,7 +75,7 @@ Write your code in the following chunk:
 
 ```
 
-### Part 2 - Visualize
+### Part 3 - Visualize
 
 Using the File Explorer on the left, navigate to the `images/` directory, then click on `milestone01.png` to open an image in the Editor pane.
 
