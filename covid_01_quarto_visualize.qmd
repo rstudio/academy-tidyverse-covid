@@ -12,7 +12,7 @@ COVID-19 deaths depend on various factors, which makes it hard to predict and pr
 
 ## How to complete a milestone
 
-Each milestone will require you to read and edit a Quarto document, like this one. **To learn how to use Quarto in Positron, see here: https://quarto.org/docs/get-started/hello/positron.html.
+Each milestone will require you to read and edit a Quarto document, like this one. **To learn how to use Quarto in Positron and RStudio, see here: https://quarto.org/docs/get-started/hello/positron.html.
 
 For each milestone, you will need to: 
 
