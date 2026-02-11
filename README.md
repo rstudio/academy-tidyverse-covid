@@ -28,7 +28,7 @@ Note: This may take several minutes to complete.
 
 **Step 2: Open your first milestone.**
 
-1. Open the file `covid_01_quarto_visualize.qmd`
+1. Open the file ending in `*_01_visualize.qmd`
 
 2. Follow the instructions in this file to complete the exercises
 
@@ -38,6 +38,6 @@ Once you have set up your project, you will have access to all of the milestone 
 
 Milestone files are numbered sequentially according to the week of the course. For example:
 
-Week 1 = `covid_01_quarto_visualize.qmd`  
-Week 2 = `covid_02_quarto_summarize.qmd`  
+Week 1 = `*_01_visualize.qmd`  
+Week 2 = `*_02_summarize.qmd`
 etc.
