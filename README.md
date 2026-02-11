@@ -22,7 +22,9 @@ This folder contains materials for your Posit Academy course project. You will c
 
 2. Run the following in your Console to install R packages you will need for this project: 
 
-`install.packages(c("broom", "gt", "knitr", "rmarkdown", "tidyverse", "waldo"))`
+```
+install.packages(c("broom", "gt", "knitr", "rmarkdown", "tidyverse", "waldo"))
+```
 
 Note: This may take several minutes to complete.
 
