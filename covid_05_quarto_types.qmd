@@ -80,8 +80,8 @@ Now that you have a `season` variable, you can compute and visualize summaries f
 ```{r}
 #| label: summary
 seasons_summary <-
-  covid_seasons %>% 
-  group_by(season) %>% 
+  covid_seasons |> 
+  group_by(season) |> 
   summarize(
     total_deaths = sum(deaths, na.rm = TRUE)
   ) 
@@ -94,7 +94,7 @@ After you have run the chunk above to create `seasons_summary`, run the chunk be
 ```{r}
 #| label: summary-plot
 #| eval: false
-seasons_summary %>% 
+seasons_summary |> 
   ggplot(mapping = aes(x = season, y = total_deaths)) +
   geom_col() + 
   labs(title = "COVID-19 deaths by season")
