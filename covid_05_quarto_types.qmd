@@ -104,7 +104,7 @@ This is a nice plot, but the order of seasons on the x axis is arbitrary (alphab
 
 #### Visualization
 
-Using the File Explorer, navigate to the `images/` directory, then click on `milestone05.png` to open an image in the Editor pane.
+Using the File Explorer, navigate to the `images/` directory, then click on `milestone05.png` to open an image.
 
 You should see a plot in which the seasons are now ordered chronologically from winter to fall. Your task is to recreate this plot.
 
