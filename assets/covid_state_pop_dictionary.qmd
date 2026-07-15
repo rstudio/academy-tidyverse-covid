@@ -1,9 +1,8 @@
 ---
-title: COVID-19 Tracking Project Data Dictionary 
-output: 
-  html_document: 
-    theme: cerulean
-    css: https://rsacdn.link/teachthis/css/style.css
+title: COVID-19 Tracking Project Data Dictionary
+format:
+  html:
+    embed-resources: true
 ---
 
 ## The COVID-19 Data
