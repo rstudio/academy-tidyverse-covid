@@ -16,6 +16,9 @@ To learn more about the variables contained in the data set, refer to the data d
 ```{r}
 #| label: setup
 #| include: false
+
+# Load your packages here
+
 ```
 
 ## Data types
@@ -53,9 +56,9 @@ Your task is to use what you've learned about the lubridate package to transform
     +  Months 4, 5, 6 = "Spring"
     +  Months 7, 8, 9 = "Summer"
     +  Months 10, 11, 12 = "Fall"
-    
+
 (Hint: use function `case_when()` for recoding values of `covid_month` into `season`.)
-    
+
 3. Add your new variables immediately after the `date` column
 
 Work in the code chunk below. Save the result as `covid_seasons`; we will use it in Part 3.
@@ -73,18 +76,18 @@ Run the following code chunk to test whether you have the same answer as the sol
 waldo::compare(covid_seasons, solution, tolerance = 1e-4)
 ```
 
-## Part 3 - The role of factor orders in visualizations
+### Part 3 - The role of factor orders in visualizations
 
 Now that you have a `season` variable, you can compute and visualize summaries for each season in the same manner as in previous milestones. Run the chunk below to view a summary table.
 
 ```{r}
 #| label: summary
 seasons_summary <-
-  covid_seasons |> 
-  group_by(season) |> 
+  covid_seasons |>
+  group_by(season) |>
   summarize(
     total_deaths = sum(deaths, na.rm = TRUE)
-  ) 
+  )
 
 seasons_summary
 ```
@@ -94,9 +97,9 @@ After you have run the chunk above to create `seasons_summary`, run the chunk be
 ```{r}
 #| label: summary-plot
 #| eval: false
-seasons_summary |> 
+seasons_summary |>
   ggplot(mapping = aes(x = season, y = total_deaths)) +
-  geom_col() + 
+  geom_col() +
   labs(title = "COVID-19 deaths by season")
 ```
 

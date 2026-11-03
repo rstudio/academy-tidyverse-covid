@@ -7,7 +7,7 @@ format: html
 
 This week, you learned several new functions from dplyr (pronounced DEE-ply-er), a commonly-used package from the tidyverse for wrangling data. You also learned some new ways to enhance your plots.
 
-You'll use these skills to explore determine the top ten states with the highest number of COVID-related deaths.
+You'll use these skills to determine the top ten states with the highest number of COVID-related deaths.
 
 To learn more about the variables contained in the data set, refer to the data dictionary: https://rstudio.github.io/academy-tidyverse-covid/assets/covid_dictionary.html
 
@@ -80,8 +80,8 @@ Using the code chunk below, investigate a single research question about this da
 Alternately, working with a data set of your own, complete the following:
 
 1. Read in your data
-2. Use `group_by()` and `summarize()` to produce simple a table from some subset of your data 
-3. Create a related graph of this data subset using ggplot 
+2. Use `group_by()` and `summarize()` to produce a simple table from some subset of your data
+3. Create a related graph of this data subset using ggplot
 
 
 ```{r}

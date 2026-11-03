@@ -14,15 +14,15 @@ COVID-19 deaths depend on various factors, which makes it hard to predict and pr
 
 Each milestone will require you to read and edit a Quarto document, like this one. **To learn how to use Quarto in Positron and RStudio, see here: https://quarto.org/docs/get-started/hello/positron.html.**
 
-For each milestone, you will need to: 
+For each milestone, you will need to:
 
 1. **Recreate a result,** like a plot, table, or model. This will require you to use the skills you have studied that week.
 
 2. **Extend the result.** Explore a new question about the data--this will provide an opportunity to both apply the skills you learned that week and to teach yourself something new. We will provide suggestions each week, but you are encouraged to explore any aspect of the data that interests you. Alternatively, apply and extend the skills you learned that week by working with your own data. Remember, being able to teach yourself new parts of a computer language is what will make you a truly competent open source programmer---and we are here to help.
 
-You'll share your extension with your groupmates at the weekly meeting, and show them how they could do the same. 
+You'll share your extension with your groupmates at the weekly meeting, and show them how they could do the same.
 
-## The `covid` data set 
+## The `covid` data set
 
 The data comes from the The COVID Tracking Project: https://covidtracking.com/.
 
@@ -38,7 +38,7 @@ library(tidyverse)
 
 ## R Basics
 
-In this milestone, you'll become familiar with the `covid` data set. 
+In this milestone, you'll become familiar with the `covid` data set.
 
 ## Recreation
 
@@ -49,7 +49,7 @@ In the code chunk below, use a command **from the readr package** to read in the
 * The data set lives in the file `covid.csv`, which is stored in the `data/` folder in your working directory.
 * Save the data set as an object named `covid`.
 
-_Note_: Both `read_csv()` and `read.csv()` read data from a CSV file, but they differ slightly in _how_ they read in data. Make sure you use the tool from the readr package. (Not sure which is which? Check the help documentation.)  
+_Note_: Both `read_csv()` and `read.csv()` read data from a CSV file, but they differ slightly in _how_ they read in data. Make sure you use the tool from the readr package. (Not sure which is which? Check the help documentation.)
 
 ```{r}
 #| label: recreation-import
@@ -60,7 +60,7 @@ _Note_: Both `read_csv()` and `read.csv()` read data from a CSV file, but they d
 
 Use R to inspect the contents of `covid`:
 
-- Display the contents of `covid` 
+- Display the contents of `covid`
 - Use `nrow()` to find the number of observations in `covid`
 - Use `mean()` to find the average number of daily increases in COVID-19 tests (`tests`)
 - Use `max()` to find the maximum number of daily increases in COVID-19 deaths (`deaths`)
@@ -79,7 +79,7 @@ Write your code in the following chunk:
 
 Using the File Explorer, navigate to the `images/` directory, then click on `milestone01.png` to open an image.
 
-You should see a plot that displays observations from **New York state**. 
+You should see a plot that displays observations from **New York state**.
 
 Use `ggplot()` in the chunk below to re-create the plot. **Note** Before plotting, you will first need to filter your data set to only include observations from New York.
 
@@ -90,20 +90,20 @@ Use `ggplot()` in the chunk below to re-create the plot. **Note** Before plottin
 
 ## Extension
 
-Using the code chunk below, investigate a research question about this data, using the visualization skills you learned this week. 
+Using the code chunk below, investigate a research question about this data, using the visualization skills you learned this week.
 
 Some ideas (we encourage you to choose one):
 
 1. Your recreation focused on the evolution of COVID-19 cases in the state of New York. How does the trajectory of New York compare to another state with similar case numbers?
-2. Do you see similar patterns across states? Does this answer change if you look at only high (or low) values of `cases`? 
+2. Do you see similar patterns across states? Does this answer change if you look at only high (or low) values of `cases`?
 3. Within a state or states of interest, what patterns do you see (if any) between `cases` and `deaths` over time?
 4. [any other research question of interest]
 
-Alternately, working with a data set of your own, complete the following: 
+Alternately, working with a data set of your own, complete the following:
 
 1. Read in your data
-2. Filter your data using a logical test/condition 
-3. Graph this data subset using at least one geom 
+2. Filter your data using a logical test/condition
+3. Graph this data subset using at least one geom
 
 ```{r}
 #| label: extension

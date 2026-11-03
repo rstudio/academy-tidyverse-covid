@@ -9,11 +9,9 @@ This week you learned about tidying and joining data sets with the tidyr (pronou
 
 Joining data sets can be deceptively tricky. It is important to keep in mind that prepping and inspecting the tables you're working with *before* you do a join is often more important (and takes more time) than doing the join itself.
 
-You'll use some of these skills in the milestone to the right.
+You'll use some of these skills in the milestone below.
 
 To learn more about the variables contained in the data set, refer to the data dictionary: https://rstudio.github.io/academy-tidyverse-covid/assets/covid_dictionary.html
-
-Remember that all tidyverse packages have already been installed for you but you will need to *load* the ones you want to use.
 
 # Milestone
 
@@ -27,7 +25,7 @@ Remember that all tidyverse packages have already been installed for you but you
 
 ## Tidy and join
 
-In this milestone, you'll join two data sets to calculate the cumulative values of `deaths` and cumulative _proportion_ of `deaths` by state. 
+In this milestone, you'll join two data sets to calculate the cumulative values of `deaths` and cumulative _proportion_ of `deaths` by state.
 
 To do this, you'll need to use the data in `covid_state_pop.csv` alongside the data you've been using in `covid.csv`. Both data sets are stored in your `data/` directory.
 
@@ -67,7 +65,7 @@ Hint: you can use the `drop_na()` function from the tidyr package to remove miss
 
 When you are satisfied with your data:
 1. Join the cleaned data sets (or clean as part of your pipe)
-2. Compute useful summaries grouped by `state`:
+2. Compute new columns within each `state`:
     - `cumul_deaths`, cumulative value of `deaths`
     - `cumul_prop_deaths`, cumulative proportion of `deaths` (i.e. cumulative `deaths` divided by the population)
 3. Select the columns you need to re-create the above table

@@ -7,7 +7,7 @@ format:
 
 ## The COVID-19 Data
 
-This project uses data from the [The COVID Tracking Project](https://covidtracking.com/):
+This project uses data from [The COVID Tracking Project](https://covidtracking.com/):
 
 > We collect, cross-check, and publish COVID-19 data from 56 US states and territories in three main areas: testing, hospitalization, and patient outcomes, racial and ethnic demographic information via [The COVID Racial Data Tracker](https://covidtracking.com/race), and long-term-care facilities via the [Long-Term-Care tracker](https://covidtracking.com/data/longtermcare). We compile these numbers to provide the most complete picture we can assemble of the US COVID-19 testing effort and the outbreak’s effects on the people and communities it strikes.
 
@@ -30,7 +30,7 @@ We discuss anomalies, ambiguities, warnings, and methodological changes for each
 
 `state`: Two-letter abbreviation for the state or territory. 
 
-`tests`: The daily increase in COVID-19 tests (i.e. the number of new cases for a given day). Test are reported differently across states -- some states/territories report tests in units of test encounters, some report tests in units of specimens, and some report tests in units of unique people. Moreover, some jurisdictions include antigen tests in their total test counts without reporting a separate total of viral (PCR) tests. Therefore, this value is an aggregate calculation of heterogeneous figures.
+`tests`: The daily increase in COVID-19 tests (i.e. the number of new tests for a given day). Tests are reported differently across states -- some states/territories report tests in units of test encounters, some report tests in units of specimens, and some report tests in units of unique people. Moreover, some jurisdictions include antigen tests in their total test counts without reporting a separate total of viral (PCR) tests. Therefore, this value is an aggregate calculation of heterogeneous figures.
 
 `cases`: The daily increase in positive and probable COVID-19 cases (i.e. the number of new cases for a given day). If a state is not reporting probable cases, this field will just represent confirmed cases. 
 

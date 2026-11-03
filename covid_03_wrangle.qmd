@@ -7,7 +7,7 @@ format: html
 
 This week, you learned several more functions from the dplyr package (pronounced DEE-ply-er). These functions help you work with the rows and columns in your data set.
 
-You'll use these skills to add new columns that calculate the cumulative number of `cases` and `deaths` across states.
+You'll use these skills to add new columns that calculate the cumulative number of `cases` and `deaths` over time in each state.
 
 To learn more about the variables contained in the data set, refer to the data dictionary: https://rstudio.github.io/academy-tidyverse-covid/assets/covid_dictionary.html
 
@@ -23,7 +23,7 @@ To learn more about the variables contained in the data set, refer to the data d
 
 ## Create and select columns
 
-In this milestone, you'll create a new variable that calculates the cumulative value of `cases` and `deaths` across states. 
+In this milestone, you'll create a new variable that calculates the cumulative value of `cases` and `deaths` over time in each state.
 
 ## Recreation
 
@@ -77,8 +77,8 @@ waldo::compare(covid_cumul, solution, tolerance = 1e-4, ignore_attr = c("class",
 
 Using the code chunk below, investigate a single research question about this data, using the additional data wrangling skills you learned this week. Some ideas:
 
-1. Some states within the US coordinated their policies in response to the pandemic; do you see a regional or coalition-based pattern in `counts`, `deaths`, or other variables? Illustrate your findings with at least one graph.
-2. This milestone focused on patterns in `cases` over time, within New York. What patterns do you see in the _ratio_ of `deaths` to `cases`, over time, within New York and/or elsewhere? (Compare with states of your choosing.)
+1. Some states within the US coordinated their policies in response to the pandemic; do you see a regional or coalition-based pattern in `cases`, `deaths`, or other variables? Illustrate your findings with at least one graph.
+2. Week 1 focused on patterns in `cases` over time, within New York. What patterns do you see in the _ratio_ of `deaths` to `cases`, over time, within New York and/or elsewhere? (Compare with states of your choosing.)
 3. Based on _either_ `cases` or `deaths`, divide this data into groups of your choosing (e.g. low/medium/high, above/below a national average, etc.) and explore patterns based on these groups.
 4. [any other research question of interest]
 
